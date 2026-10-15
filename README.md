@@ -25,3 +25,7 @@ The included PDF was drafted from a previously supplied resume base, not copied 
 
 ## Editing
 Edit HTML in a text editor, CSS for styles, and re-upload files to GitHub. This website does not require React, Node, a build step, or paid hosting.
+
+## V3 headline achievements
+
+The homepage highlights **50+ technology/data releases** and **100+ data pipelines** as career-wide figures supplied by the site owner. These should be verified before publication. Project-specific figures (four Agile releases and 15+ cloud migration pipelines) remain scoped to their respective case study and are not meant to be the same totals.

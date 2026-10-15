@@ -30,3 +30,5 @@ Open the repository > Add file > Upload files, then drag extracted files/folders
 - [ ] Mailto and LinkedIn links are correct
 - [ ] Remove any information you do not want public
 - [ ] Publish screenshots only from your own data and projects
+
+- [ ] Confirm the career-wide **50+ releases** and **100+ data pipelines** figures accurately reflect your work and are explained consistently across your resume/LinkedIn.
