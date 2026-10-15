@@ -1,42 +1,49 @@
-# E-commerce Data Pipeline — Repository README Template
+# E-commerce Data Pipeline — Project README template
 
-> **Replace placeholders with verified details from your actual code before publishing.** Do not claim automated testing or jobs that aren't implemented.
+> **Status:** This template is for the independent local project. Publish actual source and test results before putting a direct repository link on the portfolio.
 
-## Project objective
+## Objective
+Ingest e-commerce source records with Python and prepare reporting-ready relational data in PostgreSQL.
 
-Practice a repeatable path from source commerce datasets to reliable analytics tables.
+## Architecture
+Source extracts → Python ingestion → `raw` schema → standardization/validation → `public` relational tables → `analytics` reporting datasets
 
 ## Technology stack
+Document only the packages and versions present in your working project. Start with Python, PostgreSQL and SQL, then add optional tooling only if used.
 
-Python · SQL · PostgreSQL
-
-## High-level design
-
-Source datasets → Python ingestion → PostgreSQL `raw` schema → SQL transformations → `analytics` schema
+## Repository structure (adjust to reality)
+```text
+ecommerce-data-pipeline/
+  ingestion/
+  sql/
+  docs/
+  tests/
+  README.md
+  requirements.txt
+```
 
 ## Data model
+Describe business keys, surrogate keys (if any), nullability, uniqueness and relationships across orders, customers, products and order items. Include an ER diagram that matches the committed DDL.
 
-[Document actual source entities, table names, relationships and keys — e.g. customers, orders, products — after confirming the repository.]
+## Running the project
+1. Set up PostgreSQL and create required schemas.
+2. Describe how to load synthetic sample CSV input.
+3. Supply exact ingestion commands based on your committed files.
+4. Document the transformation sequence and sample analytics queries.
+5. Include cleanup and rerun instructions; note whether loads are idempotent.
 
-## Running the pipeline
+## Data quality evidence
+- [ ] Row-count reconciliation between source and target
+- [ ] Primary-key uniqueness checks
+- [ ] Null checks on required fields
+- [ ] Foreign-key / orphan-check results
+- [ ] Re-run behavior and error-handling results
 
-1. [Add virtual environment and required Python packages]
-2. [Add local PostgreSQL connection/configuration instructions — never upload credentials]
-3. [Add schema and table setup SQL]
-4. [Add real ingestion and transformation commands]
-5. [Add verification SQL]
+## Screenshots to add
+- `docs/screenshots/architecture.png` — actual architecture
+- `docs/screenshots/schema.png` — ER diagram
+- `docs/screenshots/ingestion-run.png` — successful Python run
+- `docs/screenshots/analytics-output.png` — sample SQL output
 
-## Example quality checks
-
-[Describe which of row-count checks, duplicate detection, referential integrity and null checks are actually implemented.]
-
-## Evidence
-
-- A simple architecture diagram
-- Redacted output queries/screenshots
-- One failed ingestion case and how it was resolved
-- Data model and transformation examples
-
-## Next improvements
-
-[List future work honestly; never imply these are already implemented.]
+## Results and limitations
+Report only observed record counts, processing times and accuracy measurements. If no benchmark was run, say so.

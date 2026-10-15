@@ -1,39 +1,40 @@
-# AML Transaction Monitoring — Repository README Template
+# AML Transaction Monitoring — Project README template
 
-> **Replace this template with your actual implementation details before publishing.** This is an independent practice project, not a live bank monitoring service.
+> **Status:** Adapt this template to the actual SQL files and tested workflow before copying it into your AML repository. Do not state that the Airflow DAG is public unless it is committed.
 
-## Business problem
+## Objective
+Develop reproducible, auditable SQL checks that surface suspicious transaction patterns for analyst review. A rule hit is an investigation trigger, not a conclusion of financial wrongdoing.
 
-Screen sample transaction data for patterns that merit analyst review. Rule-based flags are not determinations of criminal activity.
+## What is implemented
+- [ ] Document verified SQL files and query names from your repository.
+- [ ] Describe database tables and sample data.
+- [ ] Document structuring threshold logic and known limitations.
+- [ ] Document velocity / volume window choices and baseline comparisons.
+- [ ] Confirm whether the Airflow DAG is committed and provide the file path.
 
-## Technologies
+## Architecture
+Transaction input → PostgreSQL model → SQL rule checks → alert/review output. Apache Airflow can schedule checks when an executable DAG is present.
 
-PostgreSQL · SQL · Apache Airflow (confirm versions in your repository)
+## Environment and setup
+1. Describe PostgreSQL version, Python version, Airflow version, and required dependencies as actually used.
+2. Provide a safe synthetic fixture (never real customer banking records).
+3. Include exact `psql` import and query execution commands.
+4. If DAG exists, document `dag_id`, schedule, connections, and how to run it.
+5. Describe expected tables, output schema, and reset instructions.
 
-## Workflow
+## Test evidence
+| Test | Expected outcome | Observed / link |
+|---|---|---|
+| Obvious structuring case | Flagged by SQL rule | TODO: run and document |
+| Ordinary transaction series | Not flagged | TODO: run and document |
+| High recent velocity | Flagged when threshold crossed | TODO: run and document |
+| Empty input | No crash or safe failure | TODO: run and document |
+| Duplicate IDs | Detected or handled | TODO: run and document |
 
-Sample transactions → PostgreSQL → SQL detection rules → Airflow scheduled checks → reviewable outputs
+## Evidence screenshots to add
+- `docs/screenshots/01-schema.png` — schema + table names with sample-only data
+- `docs/screenshots/02-sql-result.png` — a query and sample flagged result
+- `docs/screenshots/03-airflow-dag.png` — only after confirming an actual DAG run
 
-## Implemented rules (verify with code)
-
-- **Structuring:** Explain the actual conditions and thresholds used in `01_Structuring.sql`.
-- **Velocity and volume:** Describe your 7-day versus 30-day baseline calculation and edge-case handling.
-
-## Repository contents
-
-[Add file tree after uploading your actual source files; do not invent filenames.]
-
-## Setup and execution
-
-[Add your exact installation prerequisites, database/schema setup steps, SQL paths and DAG activation steps.]
-
-## Data safety
-
-Use only synthetic/anonymized sample transactions. Do not upload customer records or company data.
-
-## Evidence to add
-
-- Screenshot of successful Airflow DAG execution, with dates and identifiers redacted
-- At least three rule-level test cases, including negatives
-- Output schema and explanation of false positives
-- Known limitations and next steps
+## Limits and ethics
+The project is a learning-oriented screening demonstration, not a production AML program or proof of a regulatory finding. Explain false positives and threshold sensitivity.
