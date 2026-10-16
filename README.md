@@ -9,7 +9,7 @@ A responsive HTML/CSS/JS GitHub Pages portfolio for Data Engineering and Technic
 - `index.html` — homepage / experience / project cards / contact and resume CTA.
 - `assets/styles.css` — all styling, responsive breakpoints.
 - `assets/main.js` — navigation and project filter.
-- `projects/*.html` — six technical and delivery case studies.
+- `projects/*.html` — seven technical and delivery case studies.
 - `resume/Nandita_Talapatra_Technical_Project_Manager_Resume.pdf` — printable two-page resume.
 - `project-readme-templates/*.md` — follow-up READMEs to adapt in source repositories.
 - `LAUNCH-CHECKLIST.md` — instructions to update the existing GitHub Pages site.
@@ -29,3 +29,13 @@ Edit HTML in a text editor, CSS for styles, and re-upload files to GitHub. This 
 ## V3 headline achievements
 
 The homepage highlights **50+ technology/data releases** and **100+ data pipelines** as career-wide figures supplied by the site owner. These should be verified before publication. Project-specific figures (four Agile releases and 15+ cloud migration pipelines) remain scoped to their respective case study and are not meant to be the same totals.
+
+## MUFG portfolio update (October 2026)
+
+- Added MUFG (Technical Project Manager, Apr 2025–Present) to the homepage experience timeline.
+- Added a featured banking modernization case-study card and `projects/mufg-banking-modernization.html`.
+- Updated the homepage summary and expanded the experience layout to two columns.
+- Replaced the downloadable resume PDF with a MUFG-inclusive version, preserving the previously requested Experis IT `Present` date.
+- Program metrics are resume-reported and should be independently verified before public release. No confidential employer artifacts are included.
+
+Deploy by uploading the **contents** of this ZIP to the root of the `Nandita-19.github.io` repository on `main`, replacing changed files.
